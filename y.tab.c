@@ -7628,13 +7628,7 @@ decode_prompt_string (string)
 	      goto add_string;
 
 	    case 'l':
-#if defined (HAVE_TTYNAME)
-	      temp = (char *)ttyname (fileno (stdin));
-	      t = temp ? base_pathname (temp) : "tty";
-	      temp = savestring (t);
-#else
 	      temp = savestring ("tty");
-#endif /* !HAVE_TTYNAME */
 	      goto add_string;
 
 #if defined (READLINE)
