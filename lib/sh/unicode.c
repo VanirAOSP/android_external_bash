@@ -158,7 +158,7 @@ u32cconv (c, s)
 #endif
 
   wc = c;
-
+/*
 #if __STDC_ISO_10646__
   if (sizeof (wchar_t) == 4)
     {
@@ -166,6 +166,7 @@ u32cconv (c, s)
       return n;
     }
 #endif
+*/
 
 #if HAVE_NL_LANGINFO
   codeset = nl_langinfo (CODESET);
