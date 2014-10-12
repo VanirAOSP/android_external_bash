@@ -416,7 +416,7 @@ tilde_expand_word (filename)
 
   xfree (username);
 #if defined (HAVE_GETPWENT)
-  //endpwent ();
+  endpwent ();
 #endif
   return (dirname);
 }
